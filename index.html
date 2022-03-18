@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogs</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <a href="http://127.0.0.1:5500/index.html"><h1>Movies</h1></a>
+        <nav class="navbar">
+            <div class="container">
+          
+              <div class="navbar-header">
+                <button class="navbar-toggler" data-toggle="open-navbar1">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+          
+              <div class="navbar-menu" id="open-navbar1">
+                <ul class="navbar-nav">
+                  <li class="navbar-dropdown">
+                    <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id">
+                      팀장님 <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown" id="my-dropdown-id">
+                      <li><a href="#">page1</a></li>
+                      <li class="separator"></li>
+                      <li><a href="#">page2</a></li>
+                    </ul>
+                  </li>
+                  <li class="navbar-dropdown">
+                    <a href="#" class="dropdown-toggler" data-dropdown="blog">
+                      윤지님 <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown" id="blog">
+                        <li><a href="#">page1</a></li>
+                        <li class="separator"></li>
+                        <li><a href="#">page2</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Signin</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        <form id="form">
+            <input
+                type="text"
+                id="search"
+                placeholder="Search"
+                class="search"
+            />
+        </form>
+    </header>
+    <main id="main"></main>
+</body>
+</html>
