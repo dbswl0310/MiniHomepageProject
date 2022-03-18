@@ -75,6 +75,8 @@ window.addEventListener('mouseup', (event) => {
     dropdowns.forEach((dropdownButton) => {
       let dropdown = document.querySelector(`#${dropdownButton.dataset.dropdown}`)
       let targetIsDropdown = dropdown == event.target
+      console.log(dropdown)
+      console.log(targetIsDropdown)
       if (dropdownButton == event.target) {
         return
       }
