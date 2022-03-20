@@ -1,0 +1,117 @@
+.container {
+    width: 1080px;
+  }
+  
+  .backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .backdrop_image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 105%;
+    height: 105vh;
+    z-index: -2;
+    object-fit: cover;
+    filter: blur(10px);
+    margin: -10px;
+  }
+  
+  .backdrop_cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 105%;
+    height: 105vh;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: -10px;
+  }
+  
+  .movie {
+    display: flex;
+    width: 100%;
+  }
+  
+  .poster {
+    padding: 30px;
+  }
+  
+  .poster_image {
+    width: 200px;
+    object-fit: cover;
+    border-radius: 0 20px 20px;
+  }
+
+  .youtube {
+    position: absolute;
+    top: 140px;
+    left: 95px;
+    cursor: pointer;
+    object-fit: cover;
+  }
+  
+  .detail {
+    padding: 30px 0;
+  }
+  
+  .detail_title {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  
+  .detail_genres {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+  }
+  
+  .detail_rating {
+    font-size: 14px;
+    color: #f1c40f;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  
+  .detail_overview {
+    display: inline;
+    font-size: 16px;
+    line-height: 1.5;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .detail a {
+    display: inline-flexbox;
+  }
+  
+  #recommend {
+    display: inline-flex;
+    color: white;
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #f1c40f;
+    border-radius: 10px;
+    background-color: transparent;
+  }
+  .readmore {
+    display: inline;
+    cursor: pointer;
+    color: #28A0FF;
+  }
+  ul {
+    list-style:none;
+  }
+  li {
+    border-radius: 10px;
+  }

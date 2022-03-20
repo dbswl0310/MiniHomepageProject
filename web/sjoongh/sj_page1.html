@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disney</title>
-    <link rel="stylesheet" href="./index.css">
+    <title>The hobbit</title>
+    <link rel="stylesheet" href="./navbar.css">
     <link rel="stylesheet" href="./sj_page1.css">
+    <link rel="stylesheet" href="./footer.css">
     <script src="../index.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
+    <!-- header -->
     <header>
         <a href="http://127.0.0.1:5500/index.html"><h1>Movies</h1></a>
         <nav class="navbar">
@@ -52,9 +55,9 @@
                           중호님 <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown" id="zlzl">
-                            <li><a href="#">page1</a></li>
+                            <li><a href="./sj_page1.html">The hobbit</a></li>
                             <li class="separator"></li>
-                            <li><a href="#">page2</a></li>
+                            <li><a href="./sj_page2.html">Spider man</a></li>
                         </ul>
                     </li>
                   <li><a href="#">Contact</a></li>
@@ -72,61 +75,62 @@
             />
         </form>
     </header>
+    <!-- main -->
     <div class="movie-card">
-  
         <div class="container">
-          
-          <a href="#"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_cover.jpg" alt="cover" class="cover" /></a>
-              
+          <img src="https://ww.namu.la/s/f285239f8c6b83f0ebe5a31b76ae5a90af0b95cd728fc2c42cab103693e68ff15aee8220cdcc4d979022822819c0f8cda3a63376a8f02497c84e9b5f5de47ce28ed75c53a41ac001acdf504887f3d426a720892a6a1dd7075c1d5dbd4c13b5b7" width="187px" height="217px" alt="cover" class="cover" />
+          <img onclick="detail()" src="https://www.teclasap.com.br/wp-content/uploads/2018/01/xyoutube-play-logo-transparent.png.pagespeed.ic.2uxuKi5YGz.webp" width="100px" height="100px" class="cover_youtube">
           <div class="hero">
-                  
             <div class="details">
-            
-              <div class="title1">The Hobbit <span>PG-13</span></div>
-      
-              <div class="title2">The Battle of the Five Armies</div>    
-              
-              <fieldset class="rating">
-          <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-          <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-          <input type="radio" id="star4" name="rating" value="4" checked /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-          <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-          <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
-          <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-          <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-          <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-          <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-          <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
-        </fieldset>
-              
-              <span class="likes">109 likes</span>
-              
-            </div> <!-- end details -->
-            
-          </div> <!-- end hero -->
-          
+              <div class="title1">더 호빗</div>
+              <div class="title2">다섯 군대의 전투</div>
+            </div> 
+          </div>
           <div class="description">
-            
             <div class="column1">
-              <span class="tag">action</span>
-              <span class="tag">fantasy</span>
-              <span class="tag">adventure</span>
-            </div> <!-- end column1 -->
-            
-            <div class="column2">
-              
-              <p>Bilbo Baggins is swept into a quest to reclaim the lost Dwarf Kingdom of Erebor from the fearsome dragon Smaug. Approached out of the blue by the wizard Gandalf the Grey, Bilbo finds himself joining a company of thirteen dwarves led by the legendary warrior, Thorin Oakenshield. Their journey will take them into the Wild; through... <a href="#">read more</a></p>
-    
-                
-              </div> <!-- end avatars -->
-              
-              
-              
-            </div> <!-- end column2 -->
-          </div> <!-- end description -->
-          
-         
-        </div> <!-- end container -->
-      </div> <!-- end movie-card -->
+              <span class="tag">액션</span>
+              <span class="tag">판타지</span>
+            </div>
+            <div class="context">
+              <p>
+                골목쟁이네 빌보, 참나무 방패 소린, 난쟁이족이 떠난 거대한 여정의 끝, 난쟁이족은 원래 자신들의 터전이던 에레보르에 있는 엄청난 보물을 되찾지만 이는 무시무시한 용 스마우그가 호수마을의 무기력한 주민들을 공격하게 되는 결과를 낳는다.
+                이후 산 아래의 왕 소린은 탐욕에 서서히 눈이 멀어 우정과 명예를 저버린 채 왕의 보물 아르켄스톤을 찾는다.
+                소린이 이성을 되찾도록 설득하는데 실패한 빌보는 훨씬 험난한 일이 펼쳐질 줄 모른 채 절박하고 위험한 결정을 내린다.
+                오래된 적이 가운데땅으로 돌아온 것. 암흑의 군주 사우론은 오크 군대를 보내 외로운 산에 기습 공격을 감행한다.
+                고조된 긴장감 속에 어둠이 깔리자 난쟁이, 요정, 인간은 단합할 것인지 말살될 것인지 택해야 한다.
+                마침내 다섯 군대 전투가 시작되고 빌보는 본인과 친구들의 목숨을 걸어야... <span onclick="naver()" id="readmore">read more</span></p>
+                <ul>
+                  <h4 id="recommend">추천영화</h4>
+                  <a href="../hanyong/hy_1.html">슈퍼배드 3</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="">~?</a>
+                </ul>
+              </div> 
+            </div> 
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <footer class="footer">
+        <div class="footer-left">
+          <h3>Team5<span> logo</span></h3>
+          <p class="footer-company-name">Company Name © 2015</p>
+        </div>
+        <div class="footer-center">
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <!-- js에서 위치data 받아오게 할지? -->
+            <p><span>no data</span>no data</p>
+            <i class="fa fa-phone"></i>
+            <p>0507-2323-1234</p>
+            <i class="fa fa-envelope"></i>
+            <p><a href="#">Team4@Movie.com</a></p>
+          </div>
+        </div>
+        </div>
+      </footer>
+      <script
+        src="https://kit.fontawesome.com/5993050df4.js"
+        crossorigin="anonymous"
+      ></script>
+      <script src="./sj_page1.js"></script>
 </body>
 </html>
