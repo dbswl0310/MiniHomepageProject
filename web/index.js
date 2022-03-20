@@ -39,19 +39,11 @@ form.addEventListener("submit", (e) => {
     }
 });
 
-// Other important pens.
-// Map: https://codepen.io/themustafaomar/pen/ZEGJeZq
-// Dashboard: https://codepen.io/themustafaomar/pen/jLMPKm
 
 let dropdowns = document.querySelectorAll('.navbar .dropdown-toggler')
 let dropdownIsOpen = false
 
-// Handle dropdown menues
 if (dropdowns.length) {
-    // Usually I don't recommend doing this (adding many event listeners to elements have the same handler)
-    // Instead use event delegation: https://javascript.info/event-delegation
-    // Why: https://gomakethings.com/why-event-delegation-is-a-better-way-to-listen-for-events-in-vanilla-js
-    // But since we only have two dropdowns, no problem with that.
     dropdowns.forEach((dropdown) => {
         dropdown.addEventListener('click', (event) => {
             let target = document.querySelector(`#${event.target.dataset.dropdown}`)
@@ -69,44 +61,27 @@ if (dropdowns.length) {
     })
 }
 
-window.addEventListener('mouseup', (event) => {
-    if (dropdownIsOpen) {
-        dropdowns.forEach((dropdownButton) => {
-            let dropdown = document.querySelector(`#${dropdownButton.dataset.dropdown}`)
-            let targetIsDropdown = dropdown == event.target
-            console.log(dropdown)
-            console.log(targetIsDropdown)
-            if (dropdownButton == event.target) {
-                return
-            }
 
-            if ((!targetIsDropdown) && (!dropdown.contains(event.target))) {
-                dropdown.classList.remove('show')
-            }
-        })
-    }
-})
 // Handle closing dropdowns if a user clicked the body
-window.addEventListener('mouseup', (event) => {
-    if (dropdownIsOpen) {
-        dropdowns.forEach((dropdownButton) => {
-            let dropdown = document.querySelector(`#${dropdownButton.dataset.dropdown}`)
-            let targetIsDropdown = dropdown == event.target
-            console.log(dropdown)
-            console.log(targetIsDropdown)
-            console.log(event.target);
-            // if (dropdownButton == event.target) {
-            //     return
-            // }
+// window.addEventListener('mouseup', (event) => {
+//     if (dropdownIsOpen) {
+//         dropdowns.forEach((dropdownButton) => {
+//             let dropdown = document.querySelector(`#${dropdownButton.dataset.dropdown}`)
+//             let targetIsDropdown = dropdown == event.target
+//             console.log(dropdown)
+//             console.log(targetIsDropdown)
+//             console.log(event.target);
+//             // if (dropdownButton == event.target) {
+//             //     return
+//             // }
 
-            if ((!targetIsDropdown) && (!dropdown.contains(event.target))) {
-                dropdown.classList.remove('show')
-            }
-        })
-    }
-})
+//             if ((!targetIsDropdown) && (!dropdown.contains(event.target))) {
+//                 dropdown.classList.remove('show')
+//             }
+//         })
+//     }
+// })
 
-// Open links in mobiles
 function handleSmallScreens() {
     document.querySelector('.navbar-toggler')
         .addEventListener('click', () => {
