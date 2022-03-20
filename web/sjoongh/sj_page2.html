@@ -3,18 +3,17 @@
   <head>
     <title>Spider man</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./sj_page2.css" />
     <link rel="stylesheet" href="./navbar.css">
-    <link rel="stylesheet" href="./sj_page1.css">
+    <link rel="stylesheet" href="./sj_page2.css" />
     <link rel="stylesheet" href="./footer.css">
-    <script src="../index.js" defer></script>
+    <script src="./index2.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 
   <body>
     <!-- nav -->
     <header>
-      <a href="http://127.0.0.1:5500/index.html"><h1>Movies</h1></a>
+      <a href="../index.html"><h1>Movies</h1></a>
       <nav class="navbar">
           <div class="container">
         
@@ -75,16 +74,16 @@
       </form>
   </header>
   <!-- main -->
+  <main id="main"></main>
     <div class="backdrop">
       <img class="backdrop_image" />
       <img class="backdrop_cover" />
-    </div>
+    
     <div class="container">
       <section class="movie">
         <div class="poster">
           <img class="poster_image" />
-          <img class="youtube" onclick="detail()" src="https://www.teclasap.com.br/wp-content/uploads/2018/01/xyoutube-play-logo-transparent.png.pagespeed.ic.2uxuKi5YGz.webp" width="100px" height="100px" class="cover2">
-          
+          <img class="youtube" onclick="detail()" src="https://www.teclasap.com.br/wp-content/uploads/2018/01/xyoutube-play-logo-transparent.png.pagespeed.ic.2uxuKi5YGz.webp" width="100px" height="100px" class="cover2">  
         </div>
         <div class="detail">
           <h1 class="detail_title"></h1>
@@ -94,13 +93,12 @@
           <span class="readmore" onclick="detailPage()">read more</span>
           <ul>
             <h4 id="recommend">추천영화</h4>
-            <li><a href="../hanyong/hy_1.html">슈퍼배드 3</a></li>
-            <br/>
-            <li><a href="">~?</a></li>
+            <a href="../hanyong/hy_1.html">슈퍼배드 3</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="">~?</a>
           </ul>
         </div>
       </section>
     </div>
+  </div>
     <!-- footer -->
       <footer class="footer">
 			<div class="footer-left">
@@ -120,10 +118,10 @@
 			</div>
 			</div>
 		</footer>
-    <script src="./sj_page2.js"></script>
     <script
       src="https://kit.fontawesome.com/5993050df4.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./sj_page2.js"></script>
   </body>
 </html>

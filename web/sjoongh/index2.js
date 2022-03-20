@@ -6,8 +6,8 @@ const SEARCHAPI =
 const main = document.getElementById("main");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
+const page2 = document.querySelector(".backdrop");
 
-showMovies(apiUrl);
 function showMovies(url){
     fetch(url).then(res => res.json())
         .then(function(data){
@@ -15,6 +15,9 @@ function showMovies(url){
             data.results.forEach(element => {
                 const el = document.createElement('div');
                 const image = document.createElement('img');
+                image.className = 'test';
+                let test = document.createTextNode('Test');
+                image.appendChild(test);
                 const text = document.createElement('h2');
 
                 text.innerHTML = `${element.title}`;
@@ -29,9 +32,9 @@ function showMovies(url){
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     main.innerHTML = '';
-
+    page2.remove();
+    showMovies(apiUrl);
     const searchTerm = search.value;
-    console.log(e.target);
     if (searchTerm) {
         showMovies(SEARCHAPI + searchTerm);
         search.value = "";

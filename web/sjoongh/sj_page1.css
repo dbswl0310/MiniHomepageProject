@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #43423E;
-}
-
 a {
   text-decoration: none;
   color: #5C7FB8;
@@ -22,6 +18,7 @@ a:hover {
 .movie-card {
   font: 14px/22px "Lato", Arial, sans-serif;
   color: #A9A8A3;
+  background: #43423E;
   padding: 40px 0;
 }
 
