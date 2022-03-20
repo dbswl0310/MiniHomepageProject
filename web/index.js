@@ -69,25 +69,42 @@ if (dropdowns.length) {
     })
 }
 
-// Handle closing dropdowns if a user clicked the body
-// window.addEventListener('mouseup', (event) => {
-//     if (dropdownIsOpen) {
-//         dropdowns.forEach((dropdownButton) => {
-//             let dropdown = document.querySelector(`#${dropdownButton.dataset.dropdown}`)
-//             let targetIsDropdown = dropdown == event.target
-//             console.log(dropdown)
-//             console.log(targetIsDropdown)
-//             console.log(event.target);
-//             // if (dropdownButton == event.target) {
-//             //     return
-//             // }
+window.addEventListener('mouseup', (event) => {
+    if (dropdownIsOpen) {
+        dropdowns.forEach((dropdownButton) => {
+            let dropdown = document.querySelector(`#${dropdownButton.dataset.dropdown}`)
+            let targetIsDropdown = dropdown == event.target
+            console.log(dropdown)
+            console.log(targetIsDropdown)
+            if (dropdownButton == event.target) {
+                return
+            }
 
-//             if ((!targetIsDropdown) && (!dropdown.contains(event.target))) {
-//                 dropdown.classList.remove('show')
-//             }
-//         })
-//     }
-// })
+            if ((!targetIsDropdown) && (!dropdown.contains(event.target))) {
+                dropdown.classList.remove('show')
+            }
+        })
+    }
+})
+// Handle closing dropdowns if a user clicked the body
+window.addEventListener('mouseup', (event) => {
+    if (dropdownIsOpen) {
+        dropdowns.forEach((dropdownButton) => {
+            let dropdown = document.querySelector(`#${dropdownButton.dataset.dropdown}`)
+            let targetIsDropdown = dropdown == event.target
+            console.log(dropdown)
+            console.log(targetIsDropdown)
+            console.log(event.target);
+            // if (dropdownButton == event.target) {
+            //     return
+            // }
+
+            if ((!targetIsDropdown) && (!dropdown.contains(event.target))) {
+                dropdown.classList.remove('show')
+            }
+        })
+    }
+})
 
 // Open links in mobiles
 function handleSmallScreens() {
