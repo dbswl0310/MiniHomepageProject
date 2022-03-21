@@ -3,78 +3,26 @@
   <head>
     <title>Spider man</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./navbar.css">
-    <link rel="stylesheet" href="./sj_page2.css" />
-    <link rel="stylesheet" href="./footer.css">
-    <script src="./index2.js" defer></script>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="sj_page2.css" />
+    <link rel="stylesheet" href="../footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function (){
+        $(".navbar-header").load("../header.html")
+        $(".footer").load("../footer.html")
+      });
+    </script>
   </head>
 
   <body>
-    <!-- nav -->
-    <header>
-      <a href="../index.html"><h1>Movies</h1></a>
-      <nav class="navbar">
-          <div class="container">
-        
-            <div class="navbar-header">
-              <button class="navbar-toggler" data-toggle="open-navbar1">
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
-            </div>
-        
-            <div class="navbar-menu" id="open-navbar1">
-              <ul class="navbar-nav">
-                <li class="navbar-dropdown">
-                  <a href="#" class="dropdown-toggler" data-dropdown="so">
-                    팀장님 <i class="fa fa-angle-down"></i>
-                  </a>
-                  <ul class="dropdown" id="so">
-                    <li><a href="#">page1</a></li>
-                    <li class="separator"></li>
-                    <li><a href="#">page2</a></li>
-                  </ul>
-                </li>
-                <li class="navbar-dropdown">
-                  <a href="#" class="dropdown-toggler" data-dropdown="easy">
-                    윤지님 <i class="fa fa-angle-down"></i>
-                  </a>
-                  <ul class="dropdown" id="easy">
-                      <li><a href="#">page1</a></li>
-                      <li class="separator"></li>
-                      <li><a href="#">page2</a></li>
-                  </ul>
-                </li>
-                
-                <li class="navbar-dropdown">
-                    <a href="#" class="dropdown-toggler" data-dropdown="zlzl">
-                        중호님 <i class="fa fa-angle-down"></i>
-                      </a>
-                      <ul class="dropdown" id="zlzl">
-                          <li><a href="./sj_page1.html">The hobbit</a></li>
-                          <li class="separator"></li>
-                          <li><a href="./sj_page2.html">Spider man</a></li>
-                      </ul>
-                  </li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Signin</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      <form id="form">
-          <input
-              type="text"
-              id="search"
-              placeholder="Search"
-              class="search"
-          />
-      </form>
+  <!-- header -->
+  <header class="navbar-header">
+
   </header>
   <!-- main -->
-  <main id="main"></main>
+  <!--<main id="main"></main>-->
     <div class="backdrop">
       <img class="backdrop_image" />
       <img class="backdrop_cover" />
@@ -122,6 +70,6 @@
       src="https://kit.fontawesome.com/5993050df4.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./sj_page2.js"></script>
+    <script src="sj_page2.js"></script>
   </body>
 </html>
