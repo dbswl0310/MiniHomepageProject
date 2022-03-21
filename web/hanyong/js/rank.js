@@ -1,41 +1,54 @@
-$(function() {
-    let y = new Date();
-    y.setDate(y.getDate()-1);
-    let str = y.getFullYear() + "-"
-        + ("0" + (y.getMonth() + 1)).slice(-2) + "-"
-        + ("0" + y.getDate()).slice(-2);
-    $("#date").attr("max",str);
+let today = new Date();
+let year = today.getFullYear(); // 년도
+let month = today.getMonth() + 1;  // 월
+let date = today.getDate() - 1;  // 날짜
+let d_str = year+month+date
+let url_rank = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt="+d_str
 
-    // 버튼의 클릭 이벤트
-    $("#mybtn").click(function() {
-        let d = $("#date").val();//YYYY-MM-dd
-        const regex = /-/g;
-        let d_str = d.replace(regex,"")//YYYYMMdd
+moviesRank(url_rank);
+function moviesRank(url_rank){
+    fetch(url_rank).then(res => res.json())
+        .then(function(data){
+            console.log(data.boxOfficeResult.boxofficeType);
+            let movies = [
+                { rank:5,
+                    title: `${data.boxOfficeResult.dailyBoxOfficeList[4].movieNm}`,
+                    director:'Steven Spielberg',
+                    theme:'Fantasy/Mystery/Science fiction',
+                    releaseDate:'June 11, 1993'
+                },
+                { rank:4,
+                    title: 'Aliens',
+                    director:'James Cameron',
+                    theme:' Fantasy/Science fiction/Horror',
+                    releaseDate:'July 18, 1986'
+                },
+                { rank:3,
+                    title: 'The Fifth Element',
+                    director:'Luc Besson',
+                    theme:'Fantasy/Science fiction',
+                    releaseDate:'May 9, 1997'
+                },
+                { rank:2,
+                    title: "Howl's Moving Castle",
+                    director:'Hayao Miyazaki',
+                    theme:'Drama/Fantasy',
+                    releaseDate:'June 10, 2005'
+                },
+                { rank:1,
+                    title: 'Equilibrium',
+                    director:'Kurt Wimmer',
+                    theme:'Thriller/Tech noir',
+                    releaseDate:'December 6, 2002'
+                },
+            ]
 
-        let url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt="+d_str
+            let tableBody = document.querySelector('tbody');
 
-        $.getJSON(url, function(data) {
-            let movieList = data.boxOfficeResult.dailyBoxOfficeList;
-            $("#boxoffice").empty();
-            $("#boxoffice").append(d+" 박스 오피스 순위<br>");
-            for(let i in movieList){
-                $("#boxoffice").append("<div class='movie' id="+movieList[i].movieCd+">"+(parseInt(i)+1)+". "+movieList[i].movieNm+" / "+movieList[i].audiAcc+"명</div><hr>");
-                console.log(movieList[i].movieCd);
-            }
+            movies.forEach((e)=>{
+                tableBody.insertAdjacentHTML("afterend", "<tr><td class='rank'>"+e.rank+"</td><td>"+e.title+"</td><td>"+e.director+"</td><td>"+e.theme+"</td><td>"+e.releaseDate+"</td></tr>");
+            });
+
+
         });
-    });//button click
-    //영화 제목 클릭시 영화 정보 출력
-    $("#boxoffice").on("click",".movie", function(){
-        let d = $(this);
-        let movieCd = d.attr("id");
-        let url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json?key=f5eef3421c602c6cb7ea224104795888&movieCd="+movieCd;
-        $.getJSON(url,function(res){
-            let movie = res.movieInfoResult.movieInfo;
-            d.append("<hr>");
-            d.append("개봉일 : "+movie.openDt+"<br>");
-            d.append("감독 : "+movie.directors[0].peopleNm+"<br>");
-            d.append("주연 : "+movie.actors[0].peopleNm+", "+movie.actors[1].peopleNm+", "+movie.actors[2].peopleNm);
-            d.append("<hr>");
-        })
-    })
-});//ready
+}
