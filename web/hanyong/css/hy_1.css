@@ -5,7 +5,7 @@
     padding: 0;
 }
 body{
-
+    color: #ffffff;
 }
 
 ul{
@@ -17,6 +17,18 @@ ul{
 hr{
     margin: 10px 0;
 }
+.backdrop_image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 105%;
+    height: 105vh;
+    z-index: -2;
+    object-fit: cover;
+    filter: blur(10px);
+    margin: -10px;
+}
+
 /* 기본속성 끝 */
 
 #wrap{
@@ -26,7 +38,7 @@ hr{
     margin: 0 auto;
 }
 
-#wrap>h1{
+#wrap>#title>h1{
     text-align: center;
 }
 
@@ -45,8 +57,8 @@ h1{
 }
 
 img{
-    width: 300px;
-    height: 420px;
+    width: 280px;
+    height: 380px;
     float: right;
     margin: 15px;
 }
@@ -56,23 +68,20 @@ table{
 }
 
 table, th, td{
-    border: 1px solid black;
+    border: 1px solid #ffffff;
     border-collapse: collapse;
     text-align: center;
     padding: 5px 10px;
 }
 
-li::before{
-    content: '▶ ';
-}
-
 #div1{
-    background-color: antiquewhite;
+    /*background-color: antiquewhite;*/
     margin: 0 370px 0 30px;
+    padding: 10px;
 }
 
 #div2{
-    background-color: #e9e9e9;
+    /*background-color: #e9e9e9;*/
     margin: 0 370px 0 30px;
     padding: 10px;
     box-sizing: border-box;
@@ -84,9 +93,9 @@ li::before{
 }
 
 #div4{
-    background-color: antiquewhite;
     margin: 0 70px 0 30px;
     align-content: center;
+    padding: 10px;
 }
 ul.div4 li, ol.div4 li {
     padding: 5px 0px 5px 5px;
@@ -99,12 +108,26 @@ ol.div4 li:last-child {
     border-bottom: 0px;
 }
 
-input{
-    width: 49%;
-    height: 80px;
-    background-color: black;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    border: none;
+/*SCROLL TO TOP*/
+#to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9;
+    width: 42px;
+    height: 42px;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    color: #000;
+}
+.card-img-top{
+    width: 90%;
 }
