@@ -58,6 +58,24 @@ if (dropdowns.length) {
         })
     })
 }
+// Handle closing dropdowns if a user clicked the body
+window.addEventListener('mouseup', (event) => {
+    if (dropdownIsOpen) {
+        dropdowns.forEach((dropdownButton) => {
+            let dropdown = document.querySelector(`#${dropdownButton.dataset.dropdown}`)
+            let targetIsDropdown = dropdown == event.target
+            console.log(dropdown)
+            console.log(targetIsDropdown)
+            if (dropdownButton == event.target) {
+                return
+            }
+
+            if ((!targetIsDropdown) && (!dropdown.contains(event.target))) {
+                dropdown.classList.remove('show')
+            }
+        })
+    }
+})
 
 function handleSmallScreens() {
     document.querySelector('.navbar-toggler')

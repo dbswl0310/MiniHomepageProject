@@ -1,0 +1,49 @@
+body {
+    background-color: #36454f;
+    color:#ffffff;
+}
+
+div.detail_page {
+    width : 1000px;
+    padding: 10px;
+    top: 10px;
+    left: 50%;
+    margin : auto;
+    overflow: hidden;
+    display: flex;
+    padding-top: 20px;
+}
+
+div.detail_info {
+    width: 500px;
+    float: left;
+    padding: 10px;
+}
+div.container{
+    width: 500px;
+    object-fit: cover;
+    float: left;
+    margin-left: 10px;
+    text-align: right;
+    padding-top: 10px;
+
+}
+img.posterImg{
+    width: 500px;
+    object-fit: cover;
+}
+
+div.plot_div {
+    width: 1000px;
+    line-height: 200%;
+}
+
+ul.recomend_m li{
+    padding: 5px 0px 5px 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #efefef;
+    font-size: 12px;
+}
+ul.div4 li:last-child{
+    border-bottom: 0px;
+}

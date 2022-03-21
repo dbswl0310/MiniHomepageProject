@@ -13,10 +13,10 @@ function moviesInfo(url){
             const texthy = document.createElement('p');
             titleT.innerHTML = `${data.movieInfoResult.movieInfo.movieNm}` +'('+ `${data.movieInfoResult.movieInfo.movieNmEn}` +')'
             texthy.innerHTML = '개봉일 : ' + `${data.movieInfoResult.movieInfo.openDt}` +'<br>'
-            + '감독 : ' + `${data.movieInfoResult.movieInfo.directors[0].peopleNm}` + ' , ' + `${data.movieInfoResult.movieInfo.directors[1].peopleNm}` +'<br>'
-            + '배우 : ' + `${data.movieInfoResult.movieInfo.actors[0].peopleNm}` + ' , ' + `${data.movieInfoResult.movieInfo.actors[1].peopleNm}` + ' , ' + `${data.movieInfoResult.movieInfo.actors[2].peopleNm}` +'<br>'
-            + '장르 : ' + `${data.movieInfoResult.movieInfo.genres[0].genreNm}` +'<br>'
-            + '상영등급 : ' + `${data.movieInfoResult.movieInfo.audits[0].watchGradeNm}` +'<br>';
+                + '감독 : ' + `${data.movieInfoResult.movieInfo.directors[0].peopleNm}` + ' , ' + `${data.movieInfoResult.movieInfo.directors[1].peopleNm}` +'<br>'
+                + '배우 : ' + `${data.movieInfoResult.movieInfo.actors[0].peopleNm}` + ' , ' + `${data.movieInfoResult.movieInfo.actors[1].peopleNm}` + ' , ' + `${data.movieInfoResult.movieInfo.actors[2].peopleNm}` +'<br>'
+                + '장르 : ' + `${data.movieInfoResult.movieInfo.genres[0].genreNm}` +'<br>'
+                + '상영등급 : ' + `${data.movieInfoResult.movieInfo.audits[0].watchGradeNm}` +'<br>';
             elhy.appendChild(texthy);
             div1.appendChild(elhy);
             title.appendChild(titleT);
