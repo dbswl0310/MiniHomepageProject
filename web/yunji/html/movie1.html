@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8">
+<title> movie_1</title>
+
+<link rel="icon" href="../images/favicon-32x32.png" />
+<!-- fontawosome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- CSS -->
+<link rel="stylesheet" href="../css/movie1.css">
+
+<!-- JS -->
+<script src="../js/movie1.js"></script>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+
+<!-- header & footer -->
+<script type="text/javascript">
+        $(document).ready(function (){
+            $(".navbar-header").load("../html/header2.html")
+            $(".footer").load("../html/footer.html")
+        });
+ </script>
+    
+</head>
+<body>
+
+	<!-- header>
+		<a href="http://127.0.0.1:5500/index.html">
+			<h1>Yunflix</h1>
+			<div class="logo">Yunflix</div>
+		</a>
+		<nav class="navbar">
+			<div class="container">
+
+				<div class="navbar-header">
+					<button class="navbar-toggler" data-toggle="open-navbar1">
+						<span></span> <span></span> <span></span>
+					</button>
+				</div>
+
+				<div class="navbar-menu" id="open-navbar1">
+					<ul class="navbar-nav">
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Signin</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<form id="form">
+			<input type="text" id="search" placeholder="Search" class="search" />
+		</form>
+	</header> -->
+	<div class="navbar-header"></div>
+
+	<div class="home">
+		<video
+		src="../images/movie1.mp4"
+		poster="https://occ-0-395-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfAsSlNNqkC1I47sVEa-VcASAVJX5gKZpl_qRyPUgtd9MHEr5LXhel6vTKEu5-KnFDE8R4iF6-2zZLwynSlc-csQRplwrZh5Jm8DgGtYnYwRi6XOr4dgUjpHknO6e5yz4sjr2Wkkm5hzToJ0iQWwoPc246LSKJSIfk8omU66nu1RIFpW5rKARNA.jpg?r=6da"
+		autoplay
+		muted
+		>
+		</video>
+		
+		<div class="overlay">
+			
+			<!-- 배너 -->
+			<div class="banner">
+				<div class="series">N 시리즈</div>
+				<div class="title">소년심판</div>
+				<div class="badge">오늘 한국에서 콘텐츠 1위</div>
+				<div class="description">지방법원 소년부의 엄정한 판사. 
+					복잡다단한 사건들을 다루며, 소년범에 대한 반감, 
+					정의와 형벌에 대한 굳건한 신념 사이에서 균형을 잡아간다.</div>
+				<div class="buttons">
+					<div class="white-button">
+						<i class="fa-solid fa-play"></i>
+						재생
+					</div>
+					<div class="gray-button">
+						<i class="fa-solid fa-info"></i>
+						상세보기
+					</div>
+				</div>
+				
+				<div class="extra">
+					<div class="replay-button" onclick="play()">
+						<i class="fa-solid fa-rotate-left"></i>
+					</div>
+					<div class="rating">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/KMRB_D.png">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="category-list">
+				<div class="category">
+					<div class="title">지금 뜨는 컨텐츠</div>
+					<div class="list">
+						<div class="movie">
+							<!-- placeholder -->
+							<!-- <img src="https://source.unsplash.com/random" alt=""> -->
+							<img src="https://source.unsplash.com/random" alt="">
+						</div>
+						<div class="movie">
+							<img src="https://source.unsplash.com/random" alt="">
+						</div>
+						<div class="movie">
+							<img src="https://source.unsplash.com/random" alt="">
+						</div>
+						<div class="movie">
+							<img src="https://source.unsplash.com/random" alt="">
+						</div>
+						<div class="movie">
+							<img src="https://source.unsplash.com/random" alt="">
+						</div>
+						<div class="movie">
+							<img src="https://source.unsplash.com/random" alt="">
+						</div>
+					</div>
+					
+					<div class="title">윤지 컨텐츠~</div>
+					<div class="list">
+						<div class="movie">
+							<img src="https://source.unsplash.com/random" alt="">
+						</div>
+						<div class="movie">
+							<img src="https://source.unsplash.com/random" alt="">
+						</div>
+						<div class="movie">
+							<img src="https://source.unsplash.com/random" alt="">
+						</div>
+						<div class="movie">
+							<img src="https://source.unsplash.com/random" alt="">
+						</div>
+						<div class="movie">
+							<img src="https://source.unsplash.com/random" alt="">
+						</div>
+						<div class="movie">
+							<img src="https://source.unsplash.com/random" alt="">
+						</div>
+					</div>
+					
+					<div class="title">TV 프로그램</div>
+					<div class="list">
+						<div class="movie">
+							<img src="https://source.unsplash.com/random" alt="">
+						</div>
+						<div class="movie">
+							<img src="https://source.unsplash.com/random" alt="">
+						</div>
+						<div class="movie">
+							<img src="https://source.unsplash.com/random" alt="">
+						</div>
+						<div class="movie">
+							<img src="https://source.unsplash.com/random" alt="">
+						</div>
+						<div class="movie">
+							<img src="https://source.unsplash.com/random" alt="">
+						</div>
+						<div class="movie">
+							<img src="https://source.unsplash.com/random" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	
+	<footer class="footer"></footer>
+	
+</body>
+</html>
