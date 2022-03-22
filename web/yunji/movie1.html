@@ -3,16 +3,14 @@
 <head><meta charset="UTF-8">
 <title> movie_1</title>
 
-<link rel="icon" href="images/favicon-32x32.png" />
+<link rel="icon" href="../images/favicon-32x32.png" />
 <!-- fontawosome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- CSS -->
-<link rel="stylesheet" href="css/movie1.css">
-<link rel="stylesheet" type="text/css" href="../navbar.css">
-<link rel="stylesheet" type="text/css" href="../footer.css">
+<link rel="stylesheet" href="../css/movie1.css">
 
 <!-- JS -->
-<script src="js/movie1.js"></script>
+<script src="../js/movie1.js"></script>
 
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
@@ -20,19 +18,45 @@
 <!-- header & footer -->
 <script type="text/javascript">
         $(document).ready(function (){
-			$(".navbar-header").load("../header.html")
-			$(".footer").load("../footer.html")
+            $(".navbar-header").load("../html/header2.html")
+            $(".footer").load("../html/footer.html")
         });
  </script>
     
 </head>
 <body>
 
-<header class="navbar-header"></header>
+	<!-- header>
+		<a href="http://127.0.0.1:5500/index.html">
+			<h1>Yunflix</h1>
+			<div class="logo">Yunflix</div>
+		</a>
+		<nav class="navbar">
+			<div class="container">
+
+				<div class="navbar-header">
+					<button class="navbar-toggler" data-toggle="open-navbar1">
+						<span></span> <span></span> <span></span>
+					</button>
+				</div>
+
+				<div class="navbar-menu" id="open-navbar1">
+					<ul class="navbar-nav">
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Signin</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<form id="form">
+			<input type="text" id="search" placeholder="Search" class="search" />
+		</form>
+	</header> -->
+	<div class="navbar-header"></div>
 
 	<div class="home">
 		<video
-		src="images/movie1.mp4"
+		src="../images/movie1.mp4"
 		poster="https://occ-0-395-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfAsSlNNqkC1I47sVEa-VcASAVJX5gKZpl_qRyPUgtd9MHEr5LXhel6vTKEu5-KnFDE8R4iF6-2zZLwynSlc-csQRplwrZh5Jm8DgGtYnYwRi6XOr4dgUjpHknO6e5yz4sjr2Wkkm5hzToJ0iQWwoPc246LSKJSIfk8omU66nu1RIFpW5rKARNA.jpg?r=6da"
 		autoplay
 		muted
@@ -70,77 +94,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="category-list">
-				<div class="category">
-					<div class="title">지금 뜨는 컨텐츠</div>
-					<div class="list">
-						<div class="movie">
-							<!-- placeholder -->
-							<!-- <img src="https://source.unsplash.com/random" alt=""> -->
-							<img src="https://source.unsplash.com/random" alt="">
-						</div>
-						<div class="movie">
-							<img src="https://source.unsplash.com/random" alt="">
-						</div>
-						<div class="movie">
-							<img src="https://source.unsplash.com/random" alt="">
-						</div>
-						<div class="movie">
-							<img src="https://source.unsplash.com/random" alt="">
-						</div>
-						<div class="movie">
-							<img src="https://source.unsplash.com/random" alt="">
-						</div>
-						<div class="movie">
-							<img src="https://source.unsplash.com/random" alt="">
-						</div>
-					</div>
-					
-					<div class="title">윤지 컨텐츠~</div>
-					<div class="list">
-						<div class="movie">
-							<img src="https://source.unsplash.com/random" alt="">
-						</div>
-						<div class="movie">
-							<img src="https://source.unsplash.com/random" alt="">
-						</div>
-						<div class="movie">
-							<img src="https://source.unsplash.com/random" alt="">
-						</div>
-						<div class="movie">
-							<img src="https://source.unsplash.com/random" alt="">
-						</div>
-						<div class="movie">
-							<img src="https://source.unsplash.com/random" alt="">
-						</div>
-						<div class="movie">
-							<img src="https://source.unsplash.com/random" alt="">
-						</div>
-					</div>
-					
-					<div class="title">TV 프로그램</div>
-					<div class="list">
-						<div class="movie">
-							<img src="https://source.unsplash.com/random" alt="">
-						</div>
-						<div class="movie">
-							<img src="https://source.unsplash.com/random" alt="">
-						</div>
-						<div class="movie">
-							<img src="https://source.unsplash.com/random" alt="">
-						</div>
-						<div class="movie">
-							<img src="https://source.unsplash.com/random" alt="">
-						</div>
-						<div class="movie">
-							<img src="https://source.unsplash.com/random" alt="">
-						</div>
-						<div class="movie">
-							<img src="https://source.unsplash.com/random" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
 	</div>
 	
 	<footer class="footer"></footer>
