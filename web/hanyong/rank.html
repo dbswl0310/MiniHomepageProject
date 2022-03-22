@@ -1,11 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-    <h1>My Top 5 Movies</h1>
-    <link rel="stylesheet" href="css/rank.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking</title>
+    <link rel="stylesheet" type="text/css" href="../navbar.css">
+    <link rel="stylesheet" type="text/css" href="../footer.css">
+    <link rel="stylesheet" type="text/css" href="./css/rank.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function (){
+            $(".navbar-header").load("../header.html")
+            $(".footer").load("../footer.html")
+        });
+    </script>
+
 </head>
 <body>
+<header class="navbar-header">
+
+</header>
 <table>
     <thead>
-
     <tr id="thRow1">
         <th colspan="1">Rank</th>
         <th colspan="1">Title</th>
@@ -19,5 +35,8 @@
     </tbody>
 
 </table>
+<footer class="footer">
+
+</footer>
 <script src="js/rank.js"></script>
 </body>

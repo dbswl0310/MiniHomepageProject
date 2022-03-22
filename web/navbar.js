@@ -9,8 +9,8 @@ const search = document.getElementById("search");
 
 console.log(window.location.pathname)
 
-if (window.location.pathname === "/MiniHomepageProject_war_exploded/index.html"
-    ||window.location.pathname === "/MiniHomepageProject_war_exploded/"){
+if (window.location.pathname === "/index.html"
+    ||window.location.pathname === "/"){
     showMovies(apiUrl);
 }
 
