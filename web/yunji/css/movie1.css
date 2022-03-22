@@ -21,12 +21,12 @@ video {
 	padding: 10px 50px;
 }
 .header{
-	display: flex; 
+	display: flex;
 }
 .logo{
 	color: red;
-	margin-left: 40px; 
-	margin-right: 40px; 
+	margin-left: 40px;
+	margin-right: 40px;
 	font-size: 28px;
 	font-weight: 900;
 	line-height: 36px;
@@ -99,7 +99,7 @@ video {
 .rating {
 	background-color: rgba(170, 170, 170, .2);
 	border-left: 3px solid white;
-	padding-left: 10px; 
+	padding-left: 10px;
 	width: 100%;
 	margin-left: 10px;
 }
@@ -135,7 +135,7 @@ video {
 	border-radius: 4px;
 	height: 126px;
 	width: 224px;
-} 
+}
 
 /* ==================================================== */
 header{
