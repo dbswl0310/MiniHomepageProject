@@ -63,8 +63,19 @@ h2{
     text-align: center;
     color: #fff;
 }
-
-
+.hidden {
+    display: none;
+}
+.loginsuccess {
+    display: none;
+}
+#reset {
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
 .container {
     width: 1170px;
     position: relative;
