@@ -8,6 +8,7 @@ function moviesInfo(url1){
     fetch(url1).then(res => res.json())
         .then(function(data){
             console.log(data.movieInfoResult.movieInfo.openDt);
+            console.log(data.movieInfoResult.movieInfo.movieNmEn);
             const titleT1 = document.createElement('h1');
             const elhy1 = document.createElement('div');
             const texthy1 = document.createElement('p');
