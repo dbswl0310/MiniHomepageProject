@@ -101,3 +101,27 @@ function handleSmallScreens() {
         })
 }
 handleSmallScreens()
+
+
+const savedUsername = localStorage.getItem("username");
+
+if (savedUsername !== null) {
+    paintGreeting(savedUsername);
+    greeting.classList.remove("hidden");
+    reset.classList.remove("hidden");
+    loginsuccess.classList.add("loginsuccess");
+    reset.addEventListener('click', () => {
+        localStorage.removeItem("username");
+        reset.classList.add("hidden");
+        greeting.classList.add("hidden");
+        loginsuccess.classList.remove("loginsuccess");
+    })
+} else {
+    reset.classList.add("hidden");
+    greeting.classList.add("hidden");
+    console.log(reset+"123213");
+}
+
+function paintGreeting(username){
+    greeting.innerText = `반갑습니다 ${username} !`;
+}
