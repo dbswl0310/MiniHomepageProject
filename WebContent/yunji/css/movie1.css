@@ -98,7 +98,7 @@ video {
 	border-radius: 90px;;
 }
 .rating {
-	background-color: rgba(170, 170, 170, .2);
+	/* background-color: rgba(170, 170, 170, .2); */
 	border-left: 3px solid white;
 	padding-left: 10px;
 	width: 100%;
