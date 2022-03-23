@@ -6,6 +6,7 @@ const SEARCHAPI =
 const main = document.getElementById("main");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
+const wrap = document.getElementById("wrap")
 
 console.log(window.location.pathname)
 
@@ -35,6 +36,7 @@ function showMovies(url){
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     main.innerHTML = '';
+    wrap.innerHTML = '<link rel="stylesheet" href="/index.css">';
 
     const searchTerm = search.value;
     console.log(e.target);
