@@ -24,7 +24,9 @@ function moviesRank(url_rank){
                     .then(function(info){
                         console.log(movieList[i].rank)
                         for (let j = 0; j < info.results.length; j++) {
-                            if (movieList.movieNm === info.results[j].title){
+                            console.log(movieList[i].movieNm)
+                            console.log(info.results[j].title)
+                            if (movieList[i].movieNm === info.results[j].title){
                                 let mInfo = info.results[j];
                                 table_R.innerHTML += "<tr><td>"+movieList[i].rank + "</td><td>" + movieList[i].movieNm+"</td><td>" + mInfo.vote_average+"</td><td>" + mInfo.release_date+"</td></tr>"
                             }

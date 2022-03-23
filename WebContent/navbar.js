@@ -15,7 +15,7 @@ console.log(window.location.pathname)
 
 if (window.location.pathname === "/index.html"
     ||window.location.pathname === "/"){
-    showMovies(apiUrl);
+    showMovies(apiUrl + "&language=ko-KR");
 }
 
 function showMovies(url){
