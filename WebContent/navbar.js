@@ -7,6 +7,9 @@ const main = document.getElementById("main");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 const wrap = document.getElementById("wrap");
+const greeting = document.querySelector('#greeting');
+const reset = document.querySelector("#reset");
+const loginsuccess = document.querySelector('#login');
 
 console.log(window.location.pathname)
 
