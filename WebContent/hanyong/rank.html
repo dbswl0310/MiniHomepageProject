@@ -1,42 +1,54 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranking</title>
-    <link rel="stylesheet" type="text/css" href="../index.css">
-    <link rel="stylesheet" type="text/css" href="../footer.css">
-    <link rel="stylesheet" type="text/css" href="./css/rank.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function (){
-            $(".navbar-header").load("../header.html")
-            $(".footer").load("../footer.html")
-        });
-    </script>
+    <title>swiper js</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
 
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    </style>
 </head>
+
 <body>
-<header class="navbar-header">
+<!-- Swiper -->
+<div class="swiper-container mySwiper">
+    <div class="swiper-wrapper" id="movieRank">
 
-</header>
-<table>
-    <thead>
-    <tr id="thRow1">
-        <th colspan="1">Rank</th>
-        <th colspan="1">Title</th>
-        <th colspan="1">Director</th>
-        <th colspan="1">Theme</th>
-        <th colspan="1">Release Date</th>
-    </tr>
-    </thead>
-    <tbody id="table_R">
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
 
-    </tbody>
-
-</table>
-<footer class="footer">
-
-</footer>
+</script>
 <script src="/hanyong/js/rank_tmdb.js"></script>
 </body>
+
+</html>
