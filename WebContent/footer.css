@@ -7,11 +7,12 @@
 	box-sizing: border-box;
 	width: 100%;
 	height: auto;
-  min-height: 100%;
-  padding-bottom: 100px;
+    min-height: 100%;
+    padding-bottom: 100px;
 	text-align: left;
 	font: bold 16px sans-serif;
 	padding: 10px 50px;
+	min-width: 1200px;
 }
 
 .footer .footer-left,
