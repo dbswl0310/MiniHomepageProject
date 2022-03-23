@@ -19,6 +19,7 @@ header{
     align-items: center;
     justify-content: flex-start;
     border-bottom: 1px solid #ccc;
+    min-width: 960px;
 }
 header h1{
     margin: 0 20px;

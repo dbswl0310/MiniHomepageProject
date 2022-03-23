@@ -111,7 +111,7 @@ video {
 	position: absolute;
 	top: 500px;
 	left: 50px;
-	width: calc(100%-50px);
+	width: calc(100%);
 }
 .category .title{
 	font-size: 18px;
@@ -128,7 +128,7 @@ video {
 }
 .movie:hover{
 	transform: scale(1.5);
-	transition: 1.s;
+	transition: 1s;
 	transition-delay:.5s;
 }
 .movie img{
