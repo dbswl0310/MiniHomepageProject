@@ -3,38 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>swiper js</title>
+    <title>Movie Ranking</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <style>
-        html,
-        body {
-            height: 100%;
-        }
-
-        .swiper-container {
-            width: 100%;
-            height: 100%;
-        }
-
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .swiper-slide img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-    </style>
+    <link rel="stylesheet" href="/hanyong/css/rank.css">
+    <link rel="stylesheet" type="text/css" href="/index.css">
+    <link rel="stylesheet" type="text/css" href="/footer.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function (){
+            $(".navbar-header").load("/header.html")
+            $(".footer").load("/footer.html")
+        });
+    </script>
 </head>
 
 <body>
+<header class="navbar-header">
+</header>
 <!-- Swiper -->
 <div class="swiper-container mySwiper">
     <div class="swiper-wrapper" id="movieRank">
@@ -45,10 +30,10 @@
     <div class="swiper-pagination"></div>
 </div>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-
-</script>
 <script src="/hanyong/js/rank_tmdb.js"></script>
+
+<footer class="footer">
+</footer>
 </body>
 
 </html>

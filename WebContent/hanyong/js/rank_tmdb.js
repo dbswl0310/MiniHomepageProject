@@ -13,25 +13,19 @@ function moviesRank(url_rank){
     //순위정보 json 생성
     fetch(url_rank).then(res => res.json())
         .then(async function(data){
-            console.log(data.boxOfficeResult.boxofficeType);
             let movieList = data.boxOfficeResult.dailyBoxOfficeList;
             for (let i = 0; i < 5; i++) {
-                console.log(i)
-                console.log(url_search + movieList[i].movieNm + "&language=ko-KR");
                 //상세정보 json 생성
                 await fetch(url_search + movieList[i].movieNm +"&language=ko-KR").then(res_I => res_I.json())
                     .then(function(info){
-                        console.log(movieList[i].rank)
                         for (let j = 0; j < info.results.length; j++) {
-                            console.log(movieList[i].movieNm)
-                            console.log(info.results[j].title)
                             if (movieList[i].movieNm === info.results[j].title){
                                 let mInfo = info.results[j];
                                 const elR = document.createElement('div');
                                 elR.classList.add('swiper-slide');
                                 const imageR = document.createElement('img');
                                 const textR = document.createElement('h2');
-                                textR.innerHTML = mInfo.title
+                                textR.innerHTML = movieList[i].rank + ". " + mInfo.title
                                 imageR.src = postPath + mInfo.poster_path;
                                 elR.appendChild(imageR);
                                 elR.appendChild(textR);
