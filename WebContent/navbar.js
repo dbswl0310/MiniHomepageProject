@@ -13,7 +13,7 @@ const reset = document.querySelector("#reset");
 const loginsuccess = document.querySelector('#login');
 
 
-if (window.location.pathname === "/WebContent/index.html"
+if (window.location.pathname === "/index.html"
     ||window.location.pathname === "/"){
     showMovies(apiUrl + "&language=ko-KR");
 }

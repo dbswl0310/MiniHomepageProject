@@ -16,24 +16,38 @@
         });
     </script>
 </head>
-
-<body>
 <header class="navbar-header">
 </header>
+<body>
 <!-- Swiper -->
-<div class="swiper-container mySwiper">
-    <div class="swiper-wrapper" id="movieRank">
+<div id="rankingPoster">
+    <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper" id="movieRank">
 
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
 </div>
+
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="/hanyong/js/rank_tmdb.js"></script>
+</body>
+<table>
+    <thead>
+    <tr id="thRow1">
+        <th colspan="1">Rank</th>
+        <th colspan="1">Title</th>
+        <th colspan="1">Director</th>
+        <th colspan="1">Theme</th>
+        <th colspan="1">Release Date</th>
+    </tr>
+    </thead>
+    <tbody id="table_R">
 
+    </tbody>
+</table>
 <footer class="footer">
 </footer>
-</body>
-
 </html>
