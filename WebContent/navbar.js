@@ -7,11 +7,11 @@ const main = document.getElementById("main");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 const wrap = document.getElementById("wrap");
+
 const greeting = document.querySelector('#greeting');
 const reset = document.querySelector("#reset");
 const loginsuccess = document.querySelector('#login');
 
-console.log(window.location.pathname)
 
 if (window.location.pathname === "/index.html"
     ||window.location.pathname === "/"){
@@ -21,7 +21,6 @@ if (window.location.pathname === "/index.html"
 function showMovies(url){
     fetch(url).then(res => res.json())
         .then(function(data){
-            console.log(data.results);
             data.results.forEach(element => {
                 const el = document.createElement('div');
                 const image = document.createElement('img');
@@ -39,12 +38,14 @@ function showMovies(url){
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     main.innerHTML = '';
-    wrap.innerHTML = '<link rel="stylesheet" href="/index.css">';
+    if (window.location.pathname !== "/"
+        && window.location.pathname !== "/index.html") {
+        wrap.innerHTML = '<link rel="stylesheet" href="/index.css">';
+    }
 
     const searchTerm = search.value;
-    console.log(e.target);
     if (searchTerm) {
-        showMovies(SEARCHAPI + searchTerm);
+        showMovies(SEARCHAPI + searchTerm + "&language=ko-KR");
         search.value = "";
     }
 });
@@ -56,7 +57,6 @@ if (dropdowns.length) {
     dropdowns.forEach((dropdown) => {
         dropdown.addEventListener('click', (event) => {
             let target = document.querySelector(`#${event.target.dataset.dropdown}`)
-
             if (target) {
                 if (target.classList.contains('show')) {
                     target.classList.remove('show')
@@ -75,19 +75,15 @@ window.addEventListener('mouseup', (event) => {
         dropdowns.forEach((dropdownButton) => {
             let dropdown = document.querySelector(`#${dropdownButton.dataset.dropdown}`)
             let targetIsDropdown = dropdown == event.target
-            console.log(dropdown)
-            console.log(targetIsDropdown)
             if (dropdownButton == event.target) {
                 return
             }
-
             if ((!targetIsDropdown) && (!dropdown.contains(event.target))) {
                 dropdown.classList.remove('show')
             }
         })
     }
 })
-
 function handleSmallScreens() {
     document.querySelector('.navbar-toggler')
         .addEventListener('click', () => {
@@ -96,12 +92,10 @@ function handleSmallScreens() {
                 navbarMenu.style.display = 'none'
                 return
             }
-
             navbarMenu.style.display = 'flex'
         })
 }
 handleSmallScreens()
-
 
 const savedUsername = localStorage.getItem("username");
 
@@ -119,9 +113,7 @@ if (savedUsername !== null) {
 } else {
     reset.classList.add("hidden");
     greeting.classList.add("hidden");
-    console.log(reset+"123213");
 }
-
 function paintGreeting(username){
     greeting.innerText = `반갑습니다 ${username} !`;
 }

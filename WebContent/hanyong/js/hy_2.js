@@ -7,7 +7,6 @@ moviesInfo(Url2);
 function moviesInfo(url2){
     fetch(url2).then(res => res.json())
         .then(function(data){
-            console.log(data.movieInfoResult.movieInfo.openDt);
             const titleT2 = document.createElement('h1');
             const elhy2 = document.createElement('div');
             const texthy2 = document.createElement('p');
