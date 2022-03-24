@@ -66,6 +66,9 @@ h2{
     text-align: center;
     color: #fff;
 }
+a {
+    text-decoration-line: none;
+}
 .hidden {
     display: none;
 }

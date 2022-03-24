@@ -13,7 +13,7 @@ const reset = document.querySelector("#reset");
 const loginsuccess = document.querySelector('#login');
 
 
-if (window.location.pathname === "/index.html"
+if (window.location.pathname === "/WebContent/index.html"
     ||window.location.pathname === "/"){
     showMovies(apiUrl + "&language=ko-KR");
 }
@@ -21,15 +21,19 @@ if (window.location.pathname === "/index.html"
 function showMovies(url){
     fetch(url).then(res => res.json())
         .then(function(data){
+            console.log(data.results);
             data.results.forEach(element => {
                 const el = document.createElement('div');
+                const a = document.createElement('a');
+                a.setAttribute("href", `https://www.themoviedb.org/movie/${element.id}&lanuage=ko-KR`);
                 const image = document.createElement('img');
                 image.classList.add('imgM');
                 const text = document.createElement('h2');
                 text.innerHTML = `${element.title}`;
                 image.src = IMGPATH + element.poster_path;
-                el.appendChild(image);
-                el.appendChild(text);
+                el.appendChild(a);
+                a.appendChild(image);
+                a.appendChild(text);
                 main.appendChild(el);
             });
         });
